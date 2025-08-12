@@ -319,65 +319,97 @@
 
     </section><!-- /Resume Section -->
 
-    <section id="certifications" class="portfolio section light-background">
+    <!-- Certifications Section -->
+<section id="certifications" class="portfolio section light-background">
 
+  <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Certifications</h2>
     <p>Un resumen de mis certificaciones clave que validan mis habilidades en tecnología y gestión.</p>
-  </div><div class="container">
+  </div><!-- End Section Title -->
+
+  <div class="container">
 
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
-      </div>
+      <!-- Bachelor Degree -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/bachelor-thumb.jpg" class="img-fluid" alt="Bachelor Degree">
+          <div class="portfolio-info">
+            <h4>Bachelor in Business Administration</h4>
+            <p>Peruvian University of Applied Sciences (UPC)</p>
+            <a href="assets/certificados/BACHELOR_DEGREE.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+      <!-- Data Analytics -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/data-analytics-thumb.jpg" class="img-fluid" alt="Data Analytics Certificate">
+          <div class="portfolio-info">
+            <h4>Data Analytics Certification</h4>
+            <p>Professional Data Analytics Program</p>
+            <a href="assets/certificados/DATA_ANALYTICS.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+      <!-- Project Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/project-management-thumb.jpg" class="img-fluid" alt="Project Management Certificate">
+          <div class="portfolio-info">
+            <h4>Project Management Professional</h4>
+            <p>Project Management Institute</p>
+            <a href="assets/certificados/PROJECT_MANAGEMENT.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+      <!-- SAP MM Expert -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/sap-mm-thumb.jpg" class="img-fluid" alt="SAP MM Expert User">
+          <div class="portfolio-info">
+            <h4>SAP MM Expert User</h4>
+            <p>SAP Materials Management</p>
+            <a href="assets/certificados/SAP_MM_EXPERT_USER.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+      <!-- Warehouse Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/warehouse-thumb.jpg" class="img-fluid" alt="Warehouse Management Certificate">
+          <div class="portfolio-info">
+            <h4>Warehouse Management Systems</h4>
+            <p>Supply Chain & Logistics</p>
+            <a href="assets/certificados/WAREHOUSE_MANAGEMENT.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+      <!-- Excel Specialist -->
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+        <div class="portfolio-content h-100">
+          <img src="assets/certificados/EXCEL_ESPECIALIST.png" class="img-fluid" alt="Excel Specialist Certificate">
+          <div class="portfolio-info">
+            <h4>Excel Specialist</h4>
+            <p>Microsoft Office Specialist</p>
+            <a href="assets/certificados/EXCEL_ESPECIALIST.png" title="Ver Certificado" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+          </div>
+        </div>
+      </div><!-- End Certification Item -->
+
+    </div><!-- End Portfolio Container -->
 
   </div>
 
-</section>```
-Esto crea el "contenedor" de la sección, con su título. Ahora vamos a llenarlo.
-
----
-### ## Paso 3: Añade el Código para cada Certificado
-
-Dentro de la sección que acabas de crear, donde dice ``, vamos a añadir un bloque de código por cada certificado.
-
-Este código es una adaptación del que usa la sección "Portfolio".
-
-**Copia y pega este bloque por cada certificado que tengas:**
-```html
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-  <div class="portfolio-content h-100">
-    <img src="assets/certificados/certificado-aws-thumb.jpg" class="img-fluid" alt="Certificado AWS Cloud Practitioner">
-    <div class="portfolio-info">
-      <h4>AWS Certified Cloud Practitioner</h4>
-      <p>Amazon Web Services</p>
-      <a href="assets/certificados/certificado-aws.pdf" title="Ver Certificado PDF" data-gallery="certificados-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-    </div>
-  </div>
-</div>```
-
-**Puntos Clave a Modificar para cada Certificado:**
-
-1.  **La Imagen Miniatura:** En la etiqueta `<img>`, cambia el `src` para que apunte a tu imagen miniatura. Ejemplo: `src="assets/certificados/certificado-aws-thumb.jpg"`.
-2.  **El Título y Descripción:** Cambia el texto del `<h4>` (nombre del certificado) y del `<p>` (institución que lo emite).
-3.  **El Enlace al PDF (La Magia):** En la etiqueta `<a>`, cambia el `href` para que apunte a tu archivo PDF completo. Ejemplo: `href="assets/certificados/certificado-aws.pdf"`. La clase `glightbox` se encargará de abrirlo en una ventana emergente.
-
-**Para añadir más certificados, simplemente copia y pega todo el bloque de código** y modifica los datos.
-
----
-### ## Paso 4: Añade el Enlace en el Menú de Navegación
-
-Para poder acceder a tu nueva sección desde el menú lateral:
-
-1.  Ve a la parte superior de tu `index.html` y busca el menú `<nav id="navmenu"...>`.
-2.  Añade una nueva línea en la lista para "Certifications", justo después de "Resume".
-
-```html
-<li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-
-<li><a href="#certifications"><i class="bi bi-patch-check navicon"></i> Certifications</a></li>
-
-<li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-
+</section><!-- /Certifications Section -->
+    
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
 
