@@ -27,6 +27,159 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Estilos para el portfolio mejorado */
+    .featured-project {
+      grid-column: 1 / -1;
+      max-width: 100%;
+      margin: 0 auto 40px auto;
+      position: relative;
+    }
+    
+    .featured-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+    
+    .featured-card:hover::before {
+      animation: shine 1.5s ease-in-out;
+    }
+    
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+    }
+    
+    .featured-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+    }
+    
+    .featured-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .featured-image {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .featured-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+    
+    .featured-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .featured-info {
+      color: white;
+    }
+    
+    .featured-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .featured-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .featured-description {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    
+    .featured-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    
+    .tech-tag {
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+    }
+    
+    .featured-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    .featured-button:hover {
+      background: rgba(255,255,255,0.3);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .featured-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .featured-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -119,7 +272,7 @@
               </div>
             </div>
             <p class="py-3">
-              Passionate about continuous improvement, process automation, and digital transformation. My work philosophy blends analytical thinking, agile methodologies, and a strong results-oriented mindset. I’m comfortable leading projects that integrate tools like Power BI, AppSheet, SAP, UiPath, and cloud services such as AWS and GCP. I aim to create impact by optimizing operations and enabling data-driven decisions through simple, scalable, and user-focused tech solutions.
+              Passionate about continuous improvement, process automation, and digital transformation. My work philosophy blends analytical thinking, agile methodologies, and a strong results-oriented mindset. I'm comfortable leading projects that integrate tools like Power BI, AppSheet, SAP, UiPath, and cloud services such as AWS and GCP. I aim to create impact by optimizing operations and enabling data-driven decisions through simple, scalable, and user-focused tech solutions.
             </p>
           </div>
         </div>
@@ -260,7 +413,7 @@
 
             <div class="resume-item pb-0">
               <h4>Johan Sanjines</h4>
-              <p><em>MBA candidate with over three years’ experience managing logistics initiatives focused on automation, data-driven insights, and operational efficiency. Proficient in Power BI, SAP MM, UiPath, and AppSheet, now leveraging this expertise to transition into technology-driven roles such as Project Management and Cloud Operations.</em></p>
+              <p><em>MBA candidate with over three years' experience managing logistics initiatives focused on automation, data-driven insights, and operational efficiency. Proficient in Power BI, SAP MM, UiPath, and AppSheet, now leveraging this expertise to transition into technology-driven roles such as Project Management and Cloud Operations.</em></p>
               <ul>
                 <li>Lima, Peru</li>
                 <li>(+51) 974-740-921</li>
@@ -273,7 +426,7 @@
               <h4>Master in business administration</h4>
               <h5>2025 - 2026</h5>
               <p><em>Technological University of Peru (UTP), PE</em></p>
-              <p>MBA candidate with a Bachelor’s in International Business, combining a strong business foundation with expertise in process optimization, automation, and data analytics to drive digital transformation initiatives.</p>
+              <p>MBA candidate with a Bachelor's in International Business, combining a strong business foundation with expertise in process optimization, automation, and data analytics to drive digital transformation initiatives.</p>
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
@@ -431,33 +584,50 @@
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">App</li>
-            
             <li data-filter=".filter-branding">Automation</li>
             <li data-filter=".filter-books">Dashboard</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <!-- FEATURED PROJECT - Real Time Dashboard -->
+            <div class="col-lg-12 portfolio-item isotope-item filter-books featured-project">
+              <div class="featured-card">
+                <div class="featured-content">
+                  <div class="featured-image">
+                    <img src="assets/videos/DASHBOARD-GCP.jpg" class="img-fluid" alt="Real Time Dashboard in Cloud">
+                  </div>
+                  <div class="featured-info">
+                    <div class="featured-badge">🌟 FEATURED PROJECT</div>
+                    <h4 class="featured-title">Real Time Dashboard in Cloud</h4>
+                    <p class="featured-description">
+                      Advanced cloud-based analytics platform with real-time data processing and visualization. 
+                      Complete integration from data capture to intelligent insights.
+                    </p>
+                    <div class="featured-tech">
+                      <span class="tech-tag">AppSheet</span>
+                      <span class="tech-tag">Make.com</span>
+                      <span class="tech-tag">BigQuery</span>
+                      <span class="tech-tag">Looker Studio</span>
+                      <span class="tech-tag">GCP</span>
+                    </div>
+                    <a href="assets/videos/DASHBOARD-GCP-VIDEO.mp4" title="Real Time Dashboard in Cloud" data-gallery="portfolio-gallery-books" class="featured-button glightbox preview-link">
+                      <i class="bi bi-play-circle"></i>
+                      Watch Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Featured Project -->
+
+            <!-- Regular Projects -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/videos/APP-SILLMAS-IMG.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>From form to signed PDF—automatically</h4>
                   <p>Appsheet + Appscript + Automatic PDF generation</p>
                   <a href="assets/videos/APP-SILLAS.mp4" title="From form to signed PDF—automatically" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi-play-circle"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/videos/DASHBOARD-GCP.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Real Time Dashboard in Cloud</h4>
-                  <p>Appsheet + Make + Big Query + Looker Studio</p>
-                  <a href="assets/videos/DASHBOARD-GCP-VIDEO.mp4" title="Real Time Dashboard in Cloud" data-gallery="portfolio-gallery-books" class="glightbox preview-link"><i class="bi-play-circle"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -483,8 +653,6 @@
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
-
-
 
           </div><!-- End Portfolio Container -->
 
@@ -538,8 +706,6 @@
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9125733023147!2d-77.08294472588157!3d-12.049536141950442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c949efb7de01%3A0x2c9c10cf1aff0c7e!2sAlto%20Colonial%2C%20Av.%20%C3%93scar%20R.%20Benavides%2C%20Lima%2007006!5e0!3m2!1ses!2spe!4v1755136353459!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
           </div>
-
-
 
         </div>
 
