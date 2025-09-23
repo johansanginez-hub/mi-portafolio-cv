@@ -166,6 +166,68 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
+
+    /* Estilos para los botones del hero */
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 50px;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .hero-text {
+      z-index: 2;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 2;
+    }
+    
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      border: 2px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      min-width: 220px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    
+    .hero-btn:hover {
+      background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+      border-color: rgba(255,255,255,0.3);
+    }
+    
+    .hero-btn i {
+      font-size: 1.1rem;
+    }
+    
+    .hero-btn.portfolio-btn {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+    }
+    
+    .hero-btn.portfolio-btn:hover {
+      background: linear-gradient(135deg, #e084f0 0%, #e04a5f 100%);
+      box-shadow: 0 15px 35px rgba(240, 147, 251, 0.4);
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -176,6 +238,20 @@
       
       .featured-title {
         font-size: 1.8rem;
+      }
+      
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+      
+      .hero-buttons {
+        align-items: center;
+      }
+      
+      .hero-btn {
+        min-width: 280px;
       }
     }
   </style>
@@ -228,8 +304,29 @@
       <img src="assets/img/hero-bgs.jpg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Johan Sanjines</h2>
-        <p>I'm <span class="typed" data-typed-items="Project & Operations Specialist, Process Improvement, Process Automation, Data & GCP, MBA Candidate"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2>Johan Sanjines</h2>
+            <p>I'm <span class="typed" data-typed-items="Project & Operations Specialist, Process Improvement, Process Automation, Data & GCP, MBA Candidate"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+          </div>
+          
+          <div class="hero-buttons">
+            <a href="assets/videos/ENG Cvitae-JohanAntonySanjinesMarigorda.pdf" download class="hero-btn">
+              <i class="bi bi-download"></i>
+              DOWNLOAD CV ENGLISH
+            </a>
+            
+            <a href="assets/videos/Cvitae-JohanAntonySanjinesMarigorda.pdf" download class="hero-btn">
+              <i class="bi bi-download"></i>
+              DOWNLOAD CV SPANISH
+            </a>
+            
+            <a href="#portfolio" class="hero-btn portfolio-btn">
+              <i class="bi bi-arrow-right-circle"></i>
+              GO TO PORTFOLIO
+            </a>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
